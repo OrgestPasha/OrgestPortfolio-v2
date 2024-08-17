@@ -10,7 +10,16 @@ import { CommonModule } from '@angular/common';
 })
 export class NavigationComponent {
 
-  lightModeValue:boolean=false;
+  toggleValue:boolean=true;
+
+  toggleActive={
+    'transform':'translateX(100%)',
+    'transition':'all 200ms ease-out'
+  }
+
+  toggleMode(){
+    $prima
+  }
  
 
 }

@@ -14,10 +14,10 @@
     </div>
   </div>
   <div class="nav-lower nav">
-    <div class="toggleButton">
+    <div class="toggleButton" (click)="toggleValue = !toggleValue">
       <div
         class="toggleIndicator"
-        [ngClass]="{ toggleButtonStyle: lightModeValue }"
+        [ngStyle]="toggleValue ? toggleActive : {}"
       ></div>
     </div>
   </div>

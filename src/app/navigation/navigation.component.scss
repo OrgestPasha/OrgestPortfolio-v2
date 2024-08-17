@@ -44,13 +44,11 @@
                 height:100%;
                 width:50%;
                 background-color:$colorPrimary;
+                transition:all 200ms ease-out;
                 
             }
 
-            .toggleButtonStyle{
-                transform:translateX(100%);
-                background-color: red;
-              }
+
 
         }
     }
