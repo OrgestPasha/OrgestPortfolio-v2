@@ -17,9 +17,7 @@ export class NavigationComponent {
     'transition':'all 200ms ease-out'
   }
 
-  toggleMode(){
-    $prima
-  }
+  toggleMode(){}
  
 
 }
