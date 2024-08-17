@@ -1,0 +1,57 @@
+@import "../../styles/_variables";
+
+
+.navigation{
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:50px;
+
+    nav{
+        height:100px;
+        width:100%;
+    }
+
+    .nav-upper{
+        display:flex;
+        justify-content:space-between;
+        p{
+            b{
+                position: relative;
+                bottom:12px;
+            }
+        }
+        svg{
+            stroke:$colorPrimary;
+        }
+    }
+
+    .nav-lower{
+        display:flex;
+        justify-content:flex-end;
+
+        .toggleButton{
+            width:30px;
+            height:30px;
+            border-radius:3px;
+            border:2px solid $colorPrimary;
+           
+
+            .toggleIndicator{
+                height:100%;
+                width:50%;
+                background-color:$colorPrimary;
+                
+            }
+
+            .toggleButtonStyle{
+                transform:translateX(100%);
+                background-color: red;
+              }
+
+        }
+    }
+}
