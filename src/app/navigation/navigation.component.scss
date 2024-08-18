@@ -24,9 +24,7 @@
                 bottom:12px;
             }
         }
-        svg{
-            stroke:$colorPrimary;
-        }
+       
     }
 
     .nav-lower{
@@ -37,7 +35,7 @@
             width:30px;
             height:30px;
             border-radius:3px;
-            border:2px solid $colorPrimary;
+            
            
 
             .toggleIndicator{
