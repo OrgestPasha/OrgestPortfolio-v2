@@ -1,4 +1,11 @@
-<div class="navigation" [ngStyle]="{'background-color': Service.colorSecondary, 'color': Service.colorPrimary}" style="transition: 500ms;">
+<div
+  class="navigation"
+  [ngStyle]="{
+    'background-color': Service.colorSecondary,
+    color: Service.colorPrimary
+  }"
+  style="transition: 500ms"
+>
   <div class="nav-upper nav">
     <p style="font-weight: 300">Available For <br /><b>FreeLance Work</b></p>
     <div>
@@ -8,18 +15,32 @@
         viewBox="0 0 30 30"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <line x1="15" y1="0" x2="15" y2="30" [attr.stroke]="Service.colorPrimary" stroke-width="2" />
-        <line x1="0" y1="15" x2="30" y2="15" [attr.stroke]="Service.colorPrimary" stroke-width="2" />
+        <line
+          x1="15"
+          y1="0"
+          x2="15"
+          y2="30"
+          [attr.stroke]="Service.colorPrimary"
+          stroke-width="2"
+        />
+        <line
+          x1="0"
+          y1="15"
+          x2="30"
+          y2="15"
+          [attr.stroke]="Service.colorPrimary"
+          stroke-width="2"
+        />
       </svg>
     </div>
   </div>
   <div class="nav-lower nav">
-   
-    <div class="toggleButton" [ngStyle]="{'border': '2px solid'+ Service.colorPrimary}" (click)="toggleValue = !toggleValue; toggleMode()">
-      <div
-        class="toggleIndicator"
-        [ngStyle]="getStyles()"
-      ></div>
+    <div
+      class="toggleButton"
+      [ngStyle]="{ border: '2px solid' + Service.colorPrimary }"
+      (click)="toggleValue = !toggleValue; toggleMode()"
+    >
+      <div class="toggleIndicator" [ngStyle]="getStyles()"></div>
     </div>
   </div>
 </div>
