@@ -5,12 +5,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArrowComponent } from './arrow/arrow.component';
 import { ServiceService } from './service/service.service';
 import { CommonModule } from '@angular/common';
+import { ProjectsComponent } from './projects/projects.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavigationComponent, DashboardComponent,ArrowComponent,CommonModule],
+  imports: [RouterOutlet, NavigationComponent, DashboardComponent,ArrowComponent,CommonModule,ProjectsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
