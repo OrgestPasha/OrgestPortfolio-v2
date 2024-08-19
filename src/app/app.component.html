@@ -1,1 +1,20 @@
-<app-navigation></app-navigation>
+<div
+  [ngStyle]="{
+    color: Service.colorPrimary,
+    'background-color': Service.colorSecondary
+  }"
+  style="transition: all 500ms"
+>
+  <app-navigation></app-navigation>
+  <div class="content-container">
+    <app-dashboard></app-dashboard>
+    <app-arrow></app-arrow>
+    <p>
+      I was born in <b>Kosovo in 2005</b> and had a fine upbringing. I started
+      coding when I was <b>13</b> while taking different classes and courses I
+      completed high school in <b>Natural Sciences at Sami Frashëri</b>, and I
+      am currently studying <b>Computer Science and Engineering</b> at
+      <b>UBT</b>.
+    </p>
+  </div>
+</div>

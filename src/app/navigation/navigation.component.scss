@@ -1,14 +1,15 @@
-@import "../../styles/_variables";
+
 
 
 .navigation{
+    z-index:2;
     position:fixed;
     width:100vw;
     height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
-    padding:50px;
+    padding:3.5%;
 
     nav{
         height:100px;
@@ -41,7 +42,6 @@
             .toggleIndicator{
                 height:100%;
                 width:50%;
-                background-color:$colorPrimary;
                 transition:all 200ms ease-out;
                 
             }

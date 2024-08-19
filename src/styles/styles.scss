@@ -22,17 +22,38 @@ h3 {
 }
 
 p {
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 400;
 }
 
 b {
-    font-size: 1.125rem; 
+    font-size: 1.18125rem; 
     font-weight: 600;
+}
+
+hr{
+    width:100%;
+    border:3px solid;
 }
 
 
 * {
     font-family: "Poppins", sans-serif;
     font-style: normal;
+  }
+
+
+  @media (max-width: 36rem) {
+    h1{
+        font-size:5rem;
+    }
+    h2{
+        font-size:1.5rem;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+    b{
+        font-size:1rem;
+    }
   }

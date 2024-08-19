@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ServiceService } from '../service/service.service';
 
+
 @Component({
   selector: 'app-navigation',
   standalone: true,

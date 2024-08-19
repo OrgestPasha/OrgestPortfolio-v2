@@ -1,0 +1,25 @@
+.lastName{
+    transform: translateY(-90px);
+}
+
+hr{
+    transform: translateY(-120px); 
+    width: 50%; 
+    transition: 500ms;
+}
+
+h2{transform: translateY(-120px);}
+
+@media (max-width: 36rem){
+    .lastName{
+        transform: translateY(-40px);
+    }
+    hr{
+        transform: translateY(-50px);
+    }
+    h2{
+        transform: translateY(-50px);
+    }
+    
+
+}
