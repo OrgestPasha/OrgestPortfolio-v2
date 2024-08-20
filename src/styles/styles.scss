@@ -1,4 +1,16 @@
+*::-webkit-scrollbar {
+    display: none;
+}
 
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+    overflow: -moz-scrollbars-none;
+}
+
+body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
 
 *{
     box-sizing:border-box;
@@ -36,6 +48,7 @@ hr{
     border:3px solid;
 }
 
+svg{transition:500ms;}
 
 * {
     font-family: "Poppins", sans-serif;
@@ -51,7 +64,7 @@ hr{
         font-size:1.7rem;
     }
     h3{
-        font-size:2rem;
+         font-size:1.1rem;
     }
     p{
         font-size: 0.9rem;

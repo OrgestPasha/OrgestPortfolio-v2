@@ -10,7 +10,6 @@
     .project{
 
         transition: height 500ms;
-        height:50px;
         overflow:hidden;
         margin-top:25px;
         border-bottom:5px solid ;
@@ -28,6 +27,8 @@
           
             display:flex;
             div{
+                position: relative;
+                
                 margin:10px;
                 margin-left:0;
                 width:150px;
@@ -36,7 +37,11 @@
                 display:flex;
                 justify-content:center;
                 align-items:center;
-                a{
+                a{  
+                    height:100%;
+                    width:100%;
+                    transform: translateY(2px);
+                    text-align:center;
                    font-weight:600;
                    text-decoration: none;
                 }
@@ -47,9 +52,15 @@
 }
 
 @media (max-width: 36rem){
+    .project{
+    
+    }
+    svg{
+        width:20px;
+    }
 
     h3{
-        font-size:1.7rem;
+        font-size:1.1rem;
     }
     h2{
         font-size: 3rem;

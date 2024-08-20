@@ -37,7 +37,10 @@
   <div class="nav-lower nav">
     <div
       class="toggleButton"
-      [ngStyle]="{ border: '2px solid' + Service.colorPrimary }"
+      [ngStyle]="{
+        border: '2px solid' + Service.colorPrimary,
+        background: Service.colorSecondary
+      }"
       (click)="toggleValue = !toggleValue; toggleMode()"
     >
       <div class="toggleIndicator" [ngStyle]="getStyles()"></div>

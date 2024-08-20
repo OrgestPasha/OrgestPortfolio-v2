@@ -6,12 +6,13 @@ import { ArrowComponent } from './arrow/arrow.component';
 import { ServiceService } from './service/service.service';
 import { CommonModule } from '@angular/common';
 import { ProjectsComponent } from './projects/projects.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavigationComponent, DashboardComponent,ArrowComponent,CommonModule,ProjectsComponent],
+  imports: [RouterOutlet, NavigationComponent, DashboardComponent,ArrowComponent,CommonModule,ProjectsComponent,ContactPageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

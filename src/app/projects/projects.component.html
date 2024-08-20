@@ -5,47 +5,59 @@
   <div
     class="project"
     *ngFor="let project of projects"
-    (click)="project.activeToggle = !project.activeToggle"
-    [ngStyle]="project.activeToggle ? { height: this.dynamicHeight } : {}"
+    [ngStyle]="
+      project.activeToggle
+        ? { height: this.dynamicHeight }
+        : { height: this.dynamicHeightClosed }
+    "
   >
-    <div class="name-container">
-      <h3>{{ project.name }}</h3>
-      <svg
-        width="25"
-        height="25"
-        viewBox="0 0 30 30"
-        xmlns="http://www.w3.org/2000/svg"
-        [ngStyle]="
-          project.activeToggle
-            ? { transform: 'translateX(-20px) rotate(-45deg)' }
-            : {}
-        "
-      >
-        <line
-          x1="15"
-          y1="0"
-          x2="15"
-          y2="30"
-          [attr.stroke]="Service.colorPrimary"
-          stroke-width="2"
-        />
-        <line
-          x1="0"
-          y1="15"
-          x2="30"
-          y2="15"
-          [attr.stroke]="Service.colorPrimary"
-          stroke-width="2"
-        />
-      </svg>
+    <div
+      class="project-content"
+      (click)="project.activeToggle = !project.activeToggle"
+    >
+      <div class="name-container">
+        <h3>{{ project.name }}</h3>
+        <svg
+          width="25"
+          height="25"
+          viewBox="0 0 30 30"
+          xmlns="http://www.w3.org/2000/svg"
+          [ngStyle]="
+            project.activeToggle
+              ? { transform: 'translateX(-20px) rotate(-45deg)' }
+              : {}
+          "
+        >
+          <line
+            x1="15"
+            y1="0"
+            x2="15"
+            y2="30"
+            [attr.stroke]="Service.colorPrimary"
+            stroke-width="2"
+          />
+          <line
+            x1="0"
+            y1="15"
+            x2="30"
+            y2="15"
+            [attr.stroke]="Service.colorPrimary"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+      <p [innerHTML]="project.description"></p>
+      <p>
+        This Project has been crafted using <b>{{ project.toolsUsed }}</b>
+      </p>
     </div>
-    <p [innerHTML]="project.description"></p>
-    <p>
-      This Project has been crafted using <b>{{ project.toolsUsed }}</b>
-    </p>
+
     <div class="button-container">
-      <div [ngStyle]="{ border: '2px solid ' + Service.colorPrimary }">
-        <a [href]="" target="_blank" [ngStyle]="{ color: Service.colorPrimary }"
+      <div [ngStyle]="{ border: '2px solid ' + Service.colorPrimary,  }">
+        <a
+          [href]="project.liveLink"
+          target="_blank"
+          [ngStyle]="{ color: Service.colorPrimary }"
           >Live View</a
         >
       </div>
