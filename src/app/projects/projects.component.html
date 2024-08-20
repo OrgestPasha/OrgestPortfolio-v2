@@ -2,7 +2,12 @@
 <hr class="header-line" />
 
 <div class="project-container">
-  <div class="project" *ngFor="let project of projects" ngClass="()">
+  <div
+    class="project"
+    *ngFor="let project of projects"
+    (click)="project.activeToggle = !project.activeToggle"
+    [ngStyle]="project.activeToggle ? { height: this.dynamicHeight } : {}"
+  >
     <div class="name-container">
       <h3>{{ project.name }}</h3>
       <svg
@@ -10,6 +15,11 @@
         height="25"
         viewBox="0 0 30 30"
         xmlns="http://www.w3.org/2000/svg"
+        [ngStyle]="
+          project.activeToggle
+            ? { transform: 'translateX(-20px) rotate(-45deg)' }
+            : {}
+        "
       >
         <line
           x1="15"

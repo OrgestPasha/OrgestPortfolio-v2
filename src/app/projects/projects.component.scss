@@ -1,6 +1,4 @@
-hr{
-    
-}
+
 
 .header-line{
     width:50%;
@@ -44,25 +42,17 @@ hr{
                 }
             }
             
-        }
-        
-        .active{
-            height:190px;
-
-            .name-container{
-                svg{
-                    transform:translateX(-20px) rotate(45deg);
-                }
-            }
-        }    
+        }  
     }
 }
 
 @media (max-width: 36rem){
+
+    h3{
+        font-size:1.7rem;
+    }
     h2{
         font-size: 3rem;
     }
-    h3{
-        font-size:1rem;
-    }
+    
 }

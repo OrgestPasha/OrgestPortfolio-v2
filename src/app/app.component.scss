@@ -17,14 +17,21 @@
         
     }
     p{
-        width: 50%;  
+        max-width:600px;
         text-align: justify;
     }
 }
 
 @media (max-width: 36rem){
-    p{
+    .about-desc{
+        width:400px;
+    }
+
+    .content-container{
         width:100%;
+        & > *{
+            width:80%;
+        }
     }
 }
 
