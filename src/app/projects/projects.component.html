@@ -14,6 +14,8 @@
     <div
       class="project-content"
       (click)="project.activeToggle = !project.activeToggle"
+      (mouseenter)="Service.isHovered = true"
+      (mouseleave)="Service.isHovered = false"
     >
       <div class="name-container">
         <h3>{{ project.name }}</h3>

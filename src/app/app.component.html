@@ -1,4 +1,10 @@
 <div
+  class="custom-cursor"
+  [ngStyle]="{ 'top.px': adjustedY, 'left.px': adjustedX }"
+  [ngClass]="{ 'scale-up': Service.isHovered }"
+></div>
+
+<div
   [ngStyle]="{
     color: Service.colorPrimary,
     'background-color': Service.colorSecondary

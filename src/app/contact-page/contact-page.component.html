@@ -8,6 +8,8 @@
       <form action="">
         <h3>What’s Your Name ?</h3>
         <input
+          (mouseenter)="Service.isHovered = true"
+          (mouseleave)="Service.isHovered = false"
           type="text"
           placeholder="Name"
           [ngStyle]="{
@@ -18,6 +20,8 @@
 
         <h3>What’s Your Email ?</h3>
         <input
+          (mouseenter)="Service.isHovered = true"
+          (mouseleave)="Service.isHovered = false"
           type="email"
           placeholder="Email"
           [ngStyle]="{
@@ -28,6 +32,8 @@
 
         <h3>What’s Your Message ?</h3>
         <input
+          (mouseenter)="Service.isHovered = true"
+          (mouseleave)="Service.isHovered = false"
           type="text"
           placeholder="Message"
           [ngStyle]="{
@@ -37,6 +43,8 @@
         />
 
         <button
+          (mouseenter)="Service.isHovered = true"
+          (mouseleave)="Service.isHovered = false"
           type="submit"
           [ngStyle]="{
             background: Service.colorPrimary,
@@ -53,6 +61,8 @@
         <h3>Contact Details</h3>
         <p>orgestpasha2005&#64;gmail.com</p>
         <a
+          (mouseenter)="Service.isHovered = true"
+          (mouseleave)="Service.isHovered = false"
           href=""
           download="OrgestPashaCV.pdf"
           [ngStyle]="{ color: Service.colorPrimary }"
@@ -69,18 +79,24 @@
       <div>
         <h3>Socials</h3>
         <a
+          (mouseenter)="Service.isHovered = true"
+          (mouseleave)="Service.isHovered = false"
           href="https://github.com/OrgestPasha"
           target="_blank"
           [ngStyle]="{ color: Service.colorPrimary }"
           >GitHub</a
         >
         <a
+          (mouseenter)="Service.isHovered = true"
+          (mouseleave)="Service.isHovered = false"
           href="https://www.linkedin.com/in/orgest-pasha-089342186/"
           target="_blank"
           [ngStyle]="{ color: Service.colorPrimary }"
           >Linkedin</a
         >
         <a
+          (mouseenter)="Service.isHovered = true"
+          (mouseleave)="Service.isHovered = false"
           href="https://www.instagram.com/orgestpashaa/"
           target="_blank"
           [ngStyle]="{ color: Service.colorPrimary }"

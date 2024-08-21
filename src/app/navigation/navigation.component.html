@@ -10,6 +10,8 @@
     <p style="font-weight: 300">Available For <br /><b>FreeLance Work</b></p>
     <div>
       <svg
+        (mouseenter)="Service.isHovered = true"
+        (mouseleave)="Service.isHovered = false"
         width="30"
         height="30"
         viewBox="0 0 30 30"
@@ -42,6 +44,8 @@
         background: Service.colorSecondary
       }"
       (click)="toggleValue = !toggleValue; toggleMode()"
+      (mouseenter)="Service.isHovered = true"
+      (mouseleave)="Service.isHovered = false"
     >
       <div class="toggleIndicator" [ngStyle]="getStyles()"></div>
     </div>
