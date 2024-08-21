@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ServiceService } from '../service/service.service';
+import{RouterModule,Router} from '@angular/router';
 
 
 @Component({
@@ -17,6 +18,8 @@ export class NavigationComponent {
   ngOnInit():void{
      let colorPrimary:any=this.Service.colorPrimary;
   }
+
+  NavBarToggle:boolean=false;
 
   toggleValue:boolean=true;
 
@@ -35,6 +38,9 @@ export class NavigationComponent {
   toggleMode(){
     this.Service.changeMode();
   }
+
+ 
+  
  
 
 }

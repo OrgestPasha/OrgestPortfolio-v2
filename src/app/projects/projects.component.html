@@ -55,7 +55,11 @@
     </div>
 
     <div class="button-container">
-      <div [ngStyle]="{ border: '2px solid ' + Service.colorPrimary,  }">
+      <div
+        [ngStyle]="{ border: '2px solid ' + Service.colorPrimary,  }"
+        (mouseenter)="Service.isHovered = true"
+        (mouseleave)="Service.isHovered = false"
+      >
         <a
           [href]="project.liveLink"
           target="_blank"
@@ -63,7 +67,11 @@
           >Live View</a
         >
       </div>
-      <div [ngStyle]="{ border: '2px solid ' + Service.colorPrimary }">
+      <div
+        [ngStyle]="{ border: '2px solid ' + Service.colorPrimary }"
+        (mouseenter)="Service.isHovered = true"
+        (mouseleave)="Service.isHovered = false"
+      >
         <a
           [href]="project.gitHubLink"
           target="_blank"

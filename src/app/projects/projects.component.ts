@@ -30,8 +30,8 @@ export class ProjectsComponent implements OnInit {
   updateHeight() {
     if (isPlatformBrowser(this.platformId)) {
       if (window.innerWidth < 576) { // 36rem in pixels (assuming 1rem = 16px)
-        this.dynamicHeight = '250px'; // Set to your desired height for smaller screens
-        this.dynamicHeightClosed = '35px';
+        this.dynamicHeight = '240px'; // Set to your desired height for smaller screens
+        this.dynamicHeightClosed = '30px';
       } else {
         this.dynamicHeight = '190px'; // Default height
         this.dynamicHeightClosed = '50px';

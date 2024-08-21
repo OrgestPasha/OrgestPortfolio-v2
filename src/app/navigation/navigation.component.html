@@ -1,39 +1,75 @@
-<div
-  class="navigation"
-  [ngStyle]="{
-    'background-color': Service.colorSecondary,
-    color: Service.colorPrimary
-  }"
-  style="transition: 500ms"
->
+<div class="navigation">
   <div class="nav-upper nav">
-    <p style="font-weight: 300">Available For <br /><b>FreeLance Work</b></p>
+    <p
+      style="font-weight: 300"
+      (click)="Service.scrollToElement('contact')"
+      (mouseenter)="Service.isHovered = true"
+      (mouseleave)="Service.isHovered = false"
+    >
+      Available For <br /><b>FreeLance Work</b>
+    </p>
     <div>
-      <svg
-        (mouseenter)="Service.isHovered = true"
-        (mouseleave)="Service.isHovered = false"
-        width="30"
-        height="30"
-        viewBox="0 0 30 30"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <line
-          x1="15"
-          y1="0"
-          x2="15"
-          y2="30"
-          [attr.stroke]="Service.colorPrimary"
-          stroke-width="2"
-        />
-        <line
-          x1="0"
-          y1="15"
-          x2="30"
-          y2="15"
-          [attr.stroke]="Service.colorPrimary"
-          stroke-width="2"
-        />
-      </svg>
+      <div class="nav-bar">
+        <div
+          class="nav-items"
+          [ngStyle]="{
+            transform: !NavBarToggle ? 'translateY(-40px)' : 'none',
+            opacity: !NavBarToggle ? '0' : '1'
+          }"
+        >
+          <a
+            (click)="Service.scrollToElement('dashboard')"
+            (mouseenter)="Service.isHovered = true"
+            (mouseleave)="Service.isHovered = false"
+            >Home</a
+          >
+          <a
+            (click)="Service.scrollToElement('desc')"
+            (mouseenter)="Service.isHovered = true"
+            (mouseleave)="Service.isHovered = false"
+            >About</a
+          >
+          <a
+            (click)="Service.scrollToElement('projects')"
+            (mouseenter)="Service.isHovered = true"
+            (mouseleave)="Service.isHovered = false"
+            >Projects</a
+          >
+          <a
+            (click)="Service.scrollToElement('contact')"
+            (mouseenter)="Service.isHovered = true"
+            (mouseleave)="Service.isHovered = false"
+            >Contact</a
+          >
+        </div>
+        <svg
+          (click)="NavBarToggle = !NavBarToggle"
+          [ngStyle]="{ transform: NavBarToggle ? 'rotate(45deg)' : 'none' }"
+          (mouseenter)="Service.isHovered = true"
+          (mouseleave)="Service.isHovered = false"
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="15"
+            y1="0"
+            x2="15"
+            y2="30"
+            [attr.stroke]="Service.colorPrimary"
+            stroke-width="2"
+          />
+          <line
+            x1="0"
+            y1="15"
+            x2="30"
+            y2="15"
+            [attr.stroke]="Service.colorPrimary"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
     </div>
   </div>
   <div class="nav-lower nav">

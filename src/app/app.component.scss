@@ -2,6 +2,11 @@
     cursor:none;
 }
 
+app-navigation{
+    position: fixed;
+    z-index:3;   
+}
+
 .custom-cursor{
     position: absolute;
     width:10px;
@@ -11,7 +16,7 @@
     background-color: black;
     mix-blend-mode: difference;
     filter: invert(1);
-    z-index:3;
+    z-index:4;
     pointer-events: none;
     transition:transform 300ms;
 

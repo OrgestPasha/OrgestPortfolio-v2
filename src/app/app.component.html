@@ -13,17 +13,20 @@
 >
   <app-navigation></app-navigation>
   <div class="content-container">
-    <app-dashboard></app-dashboard>
-    <app-arrow></app-arrow>
+    <app-dashboard id="dashboard"></app-dashboard>
+    <app-arrow id="desc" (click)="Service.scrollToElement('desc')"></app-arrow>
     <p class="about-desc">
       I was born in <b>Pristina Kosovo 2005</b> I started coding when I was
       <b>13</b> while taking different classes and courses I completed high
       school in <b>Natural Sciences at Sami Frashëri</b>, and I am currently
       studying <b>Computer Science and Engineering</b> at <b>UBT</b>.
     </p>
-    <app-arrow></app-arrow>
+    <app-arrow
+      (click)="Service.scrollToElement('projects')"
+      id="projects"
+    ></app-arrow>
     <app-projects></app-projects>
-    <app-arrow></app-arrow>
-    <app-contact-page></app-contact-page>
+    <app-arrow (click)="Service.scrollToElement('contact')"></app-arrow>
+    <app-contact-page id="contact"></app-contact-page>
   </div>
 </div>
