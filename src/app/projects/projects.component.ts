@@ -33,7 +33,7 @@ export class ProjectsComponent implements OnInit {
         this.dynamicHeight = '240px'; // Set to your desired height for smaller screens
         this.dynamicHeightClosed = '30px';
       } else {
-        this.dynamicHeight = '190px'; // Default height
+        this.dynamicHeight = '185px'; // Default height
         this.dynamicHeightClosed = '50px';
       }
     }
