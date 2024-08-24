@@ -6,16 +6,23 @@
     class="project"
     *ngFor="let project of projects"
     [ngStyle]="
-      project.activeToggle
+      project.activeToggle || project.isHovered == true
         ? { height: this.dynamicHeight }
         : { height: this.dynamicHeightClosed }
     "
+    (hover)="({})"
   >
     <div
       class="project-content"
       (click)="project.activeToggle = !project.activeToggle"
-      (mouseenter)="Service.isHovered = true"
-      (mouseleave)="Service.isHovered = false"
+      (mouseenter)="
+        Service.isHovered = true;
+        windowWidth > 576 ? (project.isHovered = true) : {}
+      "
+      (mouseleave)="
+        Service.isHovered = false;
+        windowWidth > 576 ? (project.isHovered = false) : {}
+      "
     >
       <div class="name-container">
         <h3>{{ project.name }}</h3>

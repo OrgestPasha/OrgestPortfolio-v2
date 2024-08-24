@@ -8,11 +8,10 @@
 .project-container{
 
     .project{
-
         transition: height 500ms;
         overflow:hidden;
         margin-top:25px;
-        border-bottom:5px solid ;
+        border-bottom:5px solid;
         .name-container{
             display: flex;
             justify-content:space-between;
@@ -47,7 +46,8 @@
                 }
             }
             
-        }  
+        }
+        
     }
 }
 

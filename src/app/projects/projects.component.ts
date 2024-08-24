@@ -17,14 +17,22 @@ export class ProjectsComponent implements OnInit {
   dynamicHeight: string = "";
   dynamicHeightClosed: string = "";
   project = { activeToggle: true }; // Example project object
-
+  windowWidth:number=0;
   ngOnInit() {
     this.updateHeight();
+    if(isPlatformBrowser(this.platformId)){
+      this.windowWidth=window.innerWidth;
+    }
+    
   }
 
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.updateHeight();
+    if(isPlatformBrowser(this.platformId)){
+      this.windowWidth=window.innerWidth;
+    }
+   
   }
 
   updateHeight() {
@@ -45,13 +53,15 @@ export class ProjectsComponent implements OnInit {
     toolsUsed: "Angular , TypeScript, Scss",
     liveLink: "",
     gitHubLink: "https://github.com/OrgestPasha/somaFood",
-    activeToggle: false
+    activeToggle: false,
+    isHovered:false,
   }, {
     name: "Kosovo Composers Festival",
     description: "A project for the Kosovo Composers Festival, an event celebrating Kosovo’s rich musical heritage. The site features an engaging design with event schedules and composer profiles",
     toolsUsed: "HTML , CSS, JavaScript",
     liveLink: "https://kosovocomposersfest.com/kryefaqja",
     gitHubLink: "https://github.com/OrgestPasha/Festivali-Kompozitoreve-Kosovare",
-    activeToggle: false
+    activeToggle: false,
+    isHovered:false
   }]
 }
