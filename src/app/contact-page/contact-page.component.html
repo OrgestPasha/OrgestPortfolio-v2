@@ -5,55 +5,111 @@
   </div>
   <div class="content">
     <div class="section-1">
-      <form action="">
-        <h3>What’s Your Name ?</h3>
-        <input
-          (mouseenter)="Service.isHovered = true"
-          (mouseleave)="Service.isHovered = false"
-          type="text"
-          placeholder="Name"
-          [ngStyle]="{
-            'border-bottom': '5px solid' + Service.colorPrimary,
-            color: Service.colorPrimary
-          }"
-        />
+      <div class="row justify-content-center align-items-center min-vh-100">
+        <div class="col-md-4">
+          <form
+            [formGroup]="contactForm"
+            (ngSubmit)="onSubmit()"
+            enctype="multipart/form-data"
+          >
+            <h3 for="name">What’s Your Name ?</h3>
+            <input
+              (mouseenter)="Service.isHovered = true"
+              (mouseleave)="Service.isHovered = false"
+              [ngStyle]="{
+                'border-bottom': '5px solid' + Service.colorPrimary,
+                color: Service.colorPrimary
+              }"
+              type="text"
+              [ngClass]="{
+                'is-invalid': name?.invalid && (name?.touched || name?.dirty)
+              }"
+              class="form-control"
+              id="name"
+              formControlName="name"
+              placeholder="Name"
+            />
+            <div *ngIf="name?.invalid && (name?.touched || name?.dirty)">
+              <small *ngIf="name?.errors?.['required']" class="text-danger"
+                >Name is required</small
+              >
+            </div>
 
-        <h3>What’s Your Email ?</h3>
-        <input
-          (mouseenter)="Service.isHovered = true"
-          (mouseleave)="Service.isHovered = false"
-          type="email"
-          placeholder="Email"
-          [ngStyle]="{
-            'border-bottom': '5px solid' + Service.colorPrimary,
-            color: Service.colorPrimary
-          }"
-        />
+            <div class="form-group mb-3">
+              <h3>What’s Your Email ?</h3>
+              <input
+                (mouseenter)="Service.isHovered = true"
+                (mouseleave)="Service.isHovered = false"
+                [ngStyle]="{
+                  'border-bottom': '5px solid' + Service.colorPrimary,
+                  color: Service.colorPrimary
+                }"
+                type="email"
+                name="email"
+                id="email"
+                formControlName="email"
+                placeholder="Email"
+                [ngClass]="{
+                  'is-invalid': email?.invalid && email?.touched && email?.dirty
+                }"
+                class="form-control"
+              />
+              <div *ngIf="email?.invalid && (email?.touched || email?.dirty)">
+                <small *ngIf="email?.errors?.['required']" class="text-danger"
+                  >Email is required</small
+                >
+                <small *ngIf="email?.errors?.['pattern']" class="text-danger"
+                  >Please provide a valid email address</small
+                >
+              </div>
+            </div>
 
-        <h3>What’s Your Message ?</h3>
-        <input
-          (mouseenter)="Service.isHovered = true"
-          (mouseleave)="Service.isHovered = false"
-          type="text"
-          placeholder="Message"
-          [ngStyle]="{
-            'border-bottom': '5px solid' + Service.colorPrimary,
-            color: Service.colorPrimary
-          }"
-        />
+            <h3 for="message">What’s Your Message ?</h3>
+            <input
+              (mouseenter)="Service.isHovered = true"
+              (mouseleave)="Service.isHovered = false"
+              [ngStyle]="{
+                'border-bottom': '5px solid' + Service.colorPrimary,
+                color: Service.colorPrimary
+              }"
+              placeholder="Message"
+              name="message"
+              id="message"
+              class="form-control"
+              formControlName="message"
+              [ngClass]="{
+                'is-invalid':
+                  message?.invalid && (message?.touched || message?.dirty)
+              }"
+            />
+            <div
+              *ngIf="message?.invalid && (message?.touched || message?.dirty)"
+            >
+              <small *ngIf="message?.errors?.['required']" class="text-danger"
+                >Message is required</small
+              >
+            </div>
 
-        <button
-          (mouseenter)="Service.isHovered = true"
-          (mouseleave)="Service.isHovered = false"
-          type="submit"
-          [ngStyle]="{
-            background: Service.colorPrimary,
-            color: Service.colorSecondary
-          }"
-        >
-          Submit
-        </button>
-      </form>
+            <div>
+              <button
+                type="submit"
+                (mouseenter)="Service.isHovered = true"
+                (mouseleave)="Service.isHovered = false"
+                type="submit"
+                [ngStyle]="{
+                  background: Service.colorPrimary,
+                  color: Service.colorSecondary
+                }"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+          <div *ngIf="!showForm" class="alert alert-success">
+            {{ successMessage }}
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="section-2">
