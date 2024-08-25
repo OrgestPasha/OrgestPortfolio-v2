@@ -14,6 +14,8 @@ import { HttpResponse } from '@angular/common/http';
 })
 export class ContactPageComponent implements OnInit {
 
+  showAlert:boolean=false;
+
   title = 'Angular Contact Form';
   contactForm: FormGroup;
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";

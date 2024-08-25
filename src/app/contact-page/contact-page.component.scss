@@ -44,8 +44,7 @@
                     transition:500ms;
 
                     &:disabled{
-                        background:black;
-                        color:white;
+                        color: red;
                     }
                 }
             }
@@ -73,8 +72,33 @@
 
           
         }
+    }  
+}
+
+.alert{
+    width:480px;
+    height: 270px;
+    position: fixed;
+    left:calc(35vw);
+    top:calc(50vh - 180px);
+    border-radius:20px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    svg{
+        scale:4;
     }
-    
+    h3{
+        margin-top:10px;
+    }
+    button{
+        margin-top:20px;
+        width:160px;
+        height:35px;
+        border: none;
+        border-radius:10px;
+    }
 }
 
 @media (max-width: 36rem){
@@ -91,9 +115,13 @@
 
            div{
             margin-top:20px;
-           }
-            
-        }
-        
+           }            
+        }     
+    }
+
+    .alert{
+        width:300px;
+        height:250px;
+        transform: translate(-25vw,15vh);
     }
 }

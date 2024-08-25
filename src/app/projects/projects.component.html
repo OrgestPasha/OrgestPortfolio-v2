@@ -10,18 +10,18 @@
         ? { height: this.dynamicHeight }
         : { height: this.dynamicHeightClosed }
     "
+    (mouseenter)="
+      Service.isHovered = true;
+      windowWidth > 576 ? (project.isHovered = true) : {}
+    "
+    (mouseleave)="
+      Service.isHovered = false;
+      windowWidth > 576 ? (project.isHovered = false) : {}
+    "
   >
     <div
       class="project-content"
       (click)="project.activeToggle = !project.activeToggle"
-      (mouseenter)="
-        Service.isHovered = true;
-        windowWidth > 576 ? (project.isHovered = true) : {}
-      "
-      (mouseleave)="
-        Service.isHovered = false;
-        windowWidth > 576 ? (project.isHovered = false) : {}
-      "
     >
       <div class="name-container">
         <h3>{{ project.name }}</h3>
@@ -62,7 +62,6 @@
 
     <div class="button-container">
       <div
-        [ngStyle]="{ border: '2px solid ' + Service.colorPrimary,  }"
         (mouseenter)="Service.isHovered = true"
         (mouseleave)="Service.isHovered = false"
       >
@@ -74,7 +73,6 @@
         >
       </div>
       <div
-        [ngStyle]="{ border: '2px solid ' + Service.colorPrimary }"
         (mouseenter)="Service.isHovered = true"
         (mouseleave)="Service.isHovered = false"
       >
