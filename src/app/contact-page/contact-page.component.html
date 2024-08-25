@@ -168,7 +168,8 @@
   [ngStyle]="{
     background: Service.colorSecondary,
     color: Service.colorPrimary,
-    border: '3px solid' + Service.colorPrimary
+    border:'1px solid' + Service.colorPrimary,
+   
   }"
 >
   <svg
@@ -180,20 +181,16 @@
   >
     <path
       d="M5 14L8.5 17.5L19 6.5"
-      [attr.stroke]="Service.colorPrimary"
+      stroke="green"
       stroke-width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
   </svg>
-  <h3>Success</h3>
+  <h3>Done</h3>
   <p>The email was sent succeessfully</p>
   <button
     (click)="showAlert = false"
-    [ngStyle]="{
-      background: Service.colorPrimary,
-      color: Service.colorSecondary
-    }"
     (mouseenter)="Service.isHovered = true"
     (mouseleave)="Service.isHovered = false"
   >
