@@ -28,21 +28,21 @@
             div{
                 position: relative;
                 
-                margin:10px;
-                margin-left:0;
-                width:150px;
-                height:35px;
-                border-radius:20px;
-                display:flex;
+                margin:30px;
+                margin-top:10px;
+                margin-left: 10px;
+                
+               
                 
                 align-items:center;
-                a{  
-                    
-                    
-                    transform: translateY(2px);
-                    
+                a{   
+                   width:100%;                                                       
                    font-weight:600;
                    text-decoration: none;
+                   transform: translateX(5px);
+                   text-align: center;
+                   border-bottom:2px solid ; 
+                  
                 }
             }
             
