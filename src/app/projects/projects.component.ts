@@ -51,7 +51,7 @@ export class ProjectsComponent implements OnInit {
     name: "Soma’s Slow Food",
     description: "A project displaying the elegance of a beautiful restaurant <br>The purpouse of its creation was teaching myself different front end effects and animations",
     toolsUsed: "Angular , TypeScript, Scss",
-    liveLink: "",
+    liveLink: "https://soma.orgestpasha.tech/",
     gitHubLink: "https://github.com/OrgestPasha/somaFood",
     activeToggle: false,
     isHovered:false,
@@ -61,6 +61,14 @@ export class ProjectsComponent implements OnInit {
     toolsUsed: "HTML , CSS, JavaScript",
     liveLink: "https://kosovocomposersfest.com/kryefaqja",
     gitHubLink: "https://github.com/OrgestPasha/Festivali-Kompozitoreve-Kosovare",
+    activeToggle: false,
+    isHovered:false
+  }, {
+    name: "Snake",
+    description: "Snake, the game <br> Created for enhancing my programing fundementals, a fun project where i learned rendering and game logic",
+    toolsUsed: "HTML , CSS, JavaScript",
+    liveLink: "snake.orgestpasha.tech",
+    gitHubLink: "https://github.com/OrgestPasha/Snake",
     activeToggle: false,
     isHovered:false
   }]
