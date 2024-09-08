@@ -67,7 +67,7 @@ export class ProjectsComponent implements OnInit {
     name: "Snake",
     description: "Snake, the game <br> Created for enhancing my programing fundementals, a fun project where i learned rendering and game logic",
     toolsUsed: "HTML , CSS, JavaScript",
-    liveLink: "snake.orgestpasha.tech",
+    liveLink: "https://snake.orgestpasha.tech",
     gitHubLink: "https://github.com/OrgestPasha/Snake",
     activeToggle: false,
     isHovered:false
