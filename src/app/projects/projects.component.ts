@@ -55,7 +55,17 @@ export class ProjectsComponent implements OnInit {
     gitHubLink: "https://github.com/OrgestPasha/somaFood",
     activeToggle: false,
     isHovered:false,
-  }, {
+  },
+  {
+    name: "Shega Marketing",
+    description: "Shega Marketing <br> Created as a freelance project for ShegaMarketing Agency displaying their motives,services and contact",
+    toolsUsed: "Angular , SCSS, TypeScript",
+    liveLink: "https://shegamarketing.com",
+    gitHubLink: "https://github.com/OrgestPasha/ShegaMarketing",
+    activeToggle: false,
+    isHovered:false
+  }, 
+  {
     name: "Kosovo Composers Festival",
     description: "A project for the Kosovo Composers Festival, an event celebrating Kosovo’s rich musical heritage. The site features an engaging design with event schedules and composer profiles",
     toolsUsed: "HTML , CSS, JavaScript",
@@ -63,7 +73,8 @@ export class ProjectsComponent implements OnInit {
     gitHubLink: "https://github.com/OrgestPasha/Festivali-Kompozitoreve-Kosovare",
     activeToggle: false,
     isHovered:false
-  }, {
+  }, 
+  {
     name: "Snake",
     description: "Snake, the game <br> Created for enhancing my programing fundementals, a fun project where i learned rendering and game logic",
     toolsUsed: "HTML , CSS, JavaScript",
