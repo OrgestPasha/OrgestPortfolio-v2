@@ -51,7 +51,7 @@
 
         .toggleButton{
            
-            transform: translateY(75vh);
+            transform: translateY(70vh);
             width:30px;
             height:30px;
             border-radius:3px;
@@ -76,7 +76,8 @@
 @media (max-width: 36rem) {
     
     .toggleButton{
-        transform: translateY(70vh);
+        position: relative;
+        top:15vh;
     }
 
     .nav-bar{
@@ -86,6 +87,7 @@
             position: relative;
             left:75px;
         }
+       
     }
     
     
