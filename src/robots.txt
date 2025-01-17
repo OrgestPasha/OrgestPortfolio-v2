@@ -1,0 +1,11 @@
+# Allow all search engines to crawl the main website
+User-agent: *
+Disallow: /assets/       # Prevent crawlers from indexing asset files
+Disallow: /node_modules/ # Ignore development folders (if exposed)
+Disallow: /environment/  # Avoid crawling sensitive environment files
+Disallow: /*.ts$         # Block TypeScript source files if exposed
+Disallow: /*.json$       # Block any JSON files
+
+# Allow search engines to crawl everything else
+Allow: /
+

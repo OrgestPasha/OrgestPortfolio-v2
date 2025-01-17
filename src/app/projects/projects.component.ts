@@ -57,6 +57,15 @@ export class ProjectsComponent implements OnInit {
     isHovered:false,
   },
   {
+    name: "Bytely Url Shortener",
+    description: "A project for shortening urls <br> Created as a project for the university of business and technology, a simple and easy to use url shortener",
+    toolsUsed: "DotNet , PHP, Javascript, HTML, CSS",
+    liveLink: "http://bytely.xyz/",
+    gitHubLink: "https://github.com/genc-v/url-shortener-web-sem-3-ubt",
+    activeToggle: false,
+    isHovered:false,
+  },
+  {
     name: "Shega Marketing",
     description: "Shega Marketing <br> Created as a freelance project for ShegaMarketing Agency displaying their motives,services and contact",
     toolsUsed: "Angular , SCSS, TypeScript",
@@ -70,7 +79,7 @@ export class ProjectsComponent implements OnInit {
     description: "A project for the Kosovo Composers Festival, an event celebrating Kosovo’s rich musical heritage. The site features an engaging design with event schedules and composer profiles",
     toolsUsed: "HTML , CSS, JavaScript",
     liveLink: "https://kosovocomposersfest.com/kryefaqja",
-    gitHubLink: "https://github.com/OrgestPasha/Festivali-Kompozitoreve-Kosovare",
+    gitHubLink: "https://github.com/OrgestPasha/FestivaliKompozitoreveKosovare",
     activeToggle: false,
     isHovered:false
   }, 

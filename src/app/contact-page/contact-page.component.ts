@@ -53,14 +53,14 @@ export class ContactPageComponent implements OnInit {
     if (this.contactForm.valid) {
       const formValues = this.contactForm.value;
       console.log('Form submitted with values:', formValues);
-      
 
-      const formData = new FormData();
-      formData.append('name', formValues.name);
-      formData.append('email', formValues.email);
-      formData.append('message', formValues.message);
+      const jsonData = {
+        name: formValues.name,
+        email: formValues.email,
+        message: formValues.message
+      };
 
-      this.Service.sendEmail(formData).subscribe({
+      this.Service.sendEmail(jsonData).subscribe({
         next: (response: HttpResponse<any>) => {
           if (response.ok) {
             this.successMessage = response.body.message;
@@ -73,10 +73,6 @@ export class ContactPageComponent implements OnInit {
           console.error('Error sending email:', error);
         }
       });
-
-    } else {
-      // Form is invalid, display error messages
-      // Additional validation logic or user feedback here
     }
   }
 
@@ -110,11 +106,4 @@ export class ContactPageComponent implements OnInit {
     const zonedTime = toZonedTime(now, timeZone);
     this.formattedTime = format(zonedTime, 'HH:mm:ss', { timeZone });
   }
-
-  
 }
-
-
-
-
-  

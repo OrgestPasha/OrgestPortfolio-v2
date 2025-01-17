@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import{RouterModule,Router} from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import{Router} from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 export class ServiceService {
 
-  private endpoint = 'http://localhost:3000/send';
+  private endpoint = 'https://email-sender-z9lk.onrender.com/api/send-email';
   constructor(private router: Router,private http: HttpClient) { }
 
   public colorPrimary:any="#000000";
@@ -38,8 +38,12 @@ export class ServiceService {
   }
 
 
-  sendEmail(emailData: any) {
-    return this.http.post(this.endpoint, emailData, { observe: 'response', });
+  sendEmail(emailData: any): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+
+    return this.http.post<any>(this.endpoint, JSON.stringify(emailData), { headers: headers, observe: 'response' });
   }
 
 
