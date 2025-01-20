@@ -66,6 +66,15 @@ export class ProjectsComponent implements OnInit {
     isHovered:false,
   },
   {
+    name: "Data Structures and Algorithms",
+    description: "A project deeper knowledge of this subject, a project where i implemented different data structures and algorithms",
+    toolsUsed: "Java , JavaScript, TypeScript",
+    liveLink: "https://github.com/OrgestPasha/Data-Structures---Algorithms",
+    gitHubLink: "https://github.com/OrgestPasha/Data-Structures---Algorithms",
+    activeToggle: false,
+    isHovered:false
+  },
+  {
     name: "Shega Marketing",
     description: "Shega Marketing <br> Created as a freelance project for ShegaMarketing Agency displaying their motives,services and contact",
     toolsUsed: "Angular , SCSS, TypeScript",
@@ -84,11 +93,11 @@ export class ProjectsComponent implements OnInit {
     isHovered:false
   }, 
   {
-    name: "Snake",
-    description: "Snake, the game <br> Created for enhancing my programing fundementals, a fun project where i learned rendering and game logic",
-    toolsUsed: "HTML , CSS, JavaScript",
-    liveLink: "https://snake.orgestpasha.tech",
-    gitHubLink: "https://github.com/OrgestPasha/Snake",
+    name: "Simple HTTP Server",
+    description: "Implemented a http sratch using java. Created for enhancing my deep knowledge of http, a fun project where i learned a lot about low level programming and networks",
+    toolsUsed: "Java , JSON Parsing Library",
+    liveLink: "https://github.com/OrgestPasha/HTTPServer",
+    gitHubLink: "https://github.com/OrgestPasha/HTTPServer",
     activeToggle: false,
     isHovered:false
   }]
