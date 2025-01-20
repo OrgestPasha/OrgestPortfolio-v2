@@ -66,7 +66,7 @@ export class ProjectsComponent implements OnInit {
     isHovered:false,
   },
   {
-    name: "Data Structures and Algorithms",
+    name: "DSA Project",
     description: "A project deeper knowledge of this subject, a project where i implemented different data structures and algorithms",
     toolsUsed: "Java , JavaScript, TypeScript",
     liveLink: "https://github.com/OrgestPasha/Data-Structures---Algorithms",
